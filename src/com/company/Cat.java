@@ -1,4 +1,5 @@
 package com.company;
+import java.util.Scanner;
 
 public class Cat {
     private int legs;
@@ -6,9 +7,11 @@ public class Cat {
     private String color;
 
     public Cat(int legs, boolean fur, String color) {
+        Scanner scanner = new Scanner(System.in);
         this.legs = legs;
         this.fur = fur;
-        this.color = color;
+        System.out.println("What color would you like your cat?");
+        setColor(scanner.nextLine());
     }
 
     public int getLegs() {
@@ -34,6 +37,5 @@ public class Cat {
     public void setColor(String color) {
         this.color = color;
     }
-
 
 }
